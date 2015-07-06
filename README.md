@@ -14,7 +14,9 @@ For my first setup, I trained a language model on 140 Mo of wikipedia articles (
 
 ###Results
 
-A lot of work still has to be done (see future guidelines), the actual results serve as proof of concept showing some semantic clustering is happening. Multiples context vectors are generated for several random wikipedia articles, the cosine distance between the vectors is used to rank those articles among themselves:
+A lot of work still has to be done (see future guidelines), the actual results serve as proof of concept showing some semantic clustering is happening. Multiples context vectors are generated for several random wikipedia articles, the cosine distance between the vectors is used to rank those articles among themselves.
+
+*Table showing the cosine distance rankings for several wikipedia documents:*
 
 | austin | american_revolution | anarcho_capitalism
 |:-----:|:-----:|:-----:

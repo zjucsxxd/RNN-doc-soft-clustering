@@ -34,10 +34,23 @@ Of course better experiments are required prior to draw any conclusion. This is 
 
 ###Future guidelines
 
-Always inspired by "[Unsupervised Learning of Video Representations using LSTMs](http://arxiv.org/pdf/1502.04681.pdf)" the first step would be to change the training procedure of the RNN. Char-rnn tries to guess the next character only, however the context representation needed to guess this t+1 character can be very simple. To force the network to create better context representation we might ask him to guess the next k characters ( k>1).  
+Among the ideas I would like to try: 
 
-Another improvement would be to use a bilinear network. With the current procedure the sequence is handled from left to right only, we are tryig to predict the future from the past. However in our case the sequences are given and we already know the future. With a bilinear network, local context vectors would represent the accumulation of the information from left to right and right to left. 
+* Always inspired by "[Unsupervised Learning of Video Representations using LSTMs](http://arxiv.org/pdf/1502.04681.pdf)" the first step would be to change the training procedure of the RNN. Char-rnn tries to guess the next character only, however the context representation needed to guess this t+1 character can be very simple. To force the network to create better context representation we might ask him to guess the next k characters ( k>1).  
 
-An important limitation of the current setup is also the network size. A network with 3 or more hidden layers might generate more elaborate representations. 
+* Another improvement would be to use a bidirectional network. With the current procedure the sequence is handled from left to right only, we are tryig to predict the future from the past. However in our case the sequences are given and we already know the future. With a bidirectional network, local context vectors would represent the accumulation of the information from left to right and right to left. 
 
-Finally the character-based and word-based approach should be compared. A comparison with LDA would also be interesting.
+* An important limitation of the current setup is also the network size. A network with 3 or more hidden layers might generate more elaborate representations. 
+
+* Finally the character-based and word-based approach should be compared. A comparison with LDA would also be interesting.
+
+* Try [gated feedback rnn](http://arxiv.org/pdf/1502.02367v4.pdf)
+
+* Find a way to modify the loss function to generate sparse vectors for representations. 
+
+Right now I am working on implementing the following net:
+
+![](https://github.com/mpagli/RNN-doc-soft-clustering/blob/master/rnn_proto_1.jpg)
+
+This net represents a language model where each prediction is done from a context vector and the current character. Learning this way will hopefully make it possible to dissociate the semantic (context) from the character representation.
+

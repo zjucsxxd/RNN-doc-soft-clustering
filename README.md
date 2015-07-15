@@ -54,3 +54,14 @@ Right now I am working on implementing the following net:
 
 This net represents a language model where each prediction is done from a context vector and the current character. Learning this way will hopefully make it possible to dissociate the semantic (context) from the character representation.
 
+### Interesting papers
+
+* [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](http://arxiv.org/pdf/1406.1078.pdf)
+* [Sequence to Sequence Learning with Neural Networks](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf)
+* [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](http://arxiv.org/pdf/1502.03044v2.pdf)
+* [End-To-End Memory Networks](http://arxiv.org/pdf/1503.08895v4.pdf)
+* [Neural machine translation by jointly learning to align and translate](http://arxiv.org/pdf/1409.0473v6.pdf)
+* [Gated Feedback Recurrent Neural Networks](http://arxiv.org/pdf/1502.02367v4.pdf)
+* [Recurrent neural network regularization](http://arxiv.org/pdf/1409.2329v5.pdf)
+* [Generating Sequences With Recurrent Neural Networks](http://arxiv.org/pdf/1308.0850v5.pdf)
+* [Neural Turing Machines](http://arxiv.org/pdf/1410.5401v2.pdf)
